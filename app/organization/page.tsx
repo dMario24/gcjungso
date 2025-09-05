@@ -1,8 +1,16 @@
+'use client';
+import dynamic from 'next/dynamic';
+
+const OrgChart = dynamic(() => import('../components/OrgChart'), {
+  ssr: false,
+});
+
 const OrganizationPage = () => {
   const containerStyle: React.CSSProperties = {
     padding: '2rem',
-    maxWidth: '800px',
+    maxWidth: '1200px',
     margin: '0 auto',
+    textAlign: 'center',
   };
 
   const titleStyle: React.CSSProperties = {
@@ -13,21 +21,10 @@ const OrganizationPage = () => {
     marginBottom: '1.5rem',
   };
 
-  const contentStyle: React.CSSProperties = {
-    fontSize: '1.1rem',
-    textAlign: 'center',
-    padding: '2rem',
-    border: '1px dashed #ccc',
-    borderRadius: '8px',
-  };
-
   return (
     <div style={containerStyle}>
       <h1 style={titleStyle}>조직도</h1>
-      <div style={contentStyle}>
-        <p>조직도 이미지가 여기에 표시될 예정입니다.</p>
-        {/* Later, an <Image> tag can be placed here */}
-      </div>
+      <OrgChart />
     </div>
   );
 };
