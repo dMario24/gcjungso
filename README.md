@@ -13,3 +13,8 @@ pnpm dev
 # or
 bun dev
 ```
+
+# Ref
+- GTM : https://nextjs.org/docs/app/guides/third-party-libraries
+- OG : https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image
+
