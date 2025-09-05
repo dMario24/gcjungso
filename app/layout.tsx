@@ -14,9 +14,40 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteTitle = "과천시중소기업협의회";
+const siteDescription = "과천시 중소기업의 성장과 지역 사회 발전을 위한 든든한 파트너. 회원사 정보, 소식, 문의하기 등을 제공합니다.";
+const siteUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+
 export const metadata: Metadata = {
-  title: "과천시 중소기업협의회",
-  description: "과천시 중소기업협의회 공식 홈페이지",
+  title: {
+    default: siteTitle,
+    template: `%s | ${siteTitle}`,
+  },
+  description: siteDescription,
+  keywords: ["과천시", "중소기업", "협의회", "비즈니스", "네트워킹", "과천"],
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: './',
+    siteName: siteTitle,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: `${siteTitle} OG Image`,
+      },
+    ],
+    type: 'website',
+    locale: 'ko_KR',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteTitle,
+    description: siteDescription,
+    images: ['/opengraph-image'],
+  },
 };
 
 export default function RootLayout({
