@@ -12,10 +12,7 @@ export const runtime = 'edge';
 
 // Image generation
 export default async function Image() {
-  const baseUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : 'http://localhost:3000';
-  const logoUrl = `${baseUrl}/opengraph-image.jpeg`;
+  const logoUrl = `https://gcjungso.vercel.app/opengraph-image.jpeg`;
 
   try {
     const logoData = await fetch(logoUrl).then((res) => res.arrayBuffer());
