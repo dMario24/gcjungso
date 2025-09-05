@@ -38,13 +38,10 @@ const KakaoPage = () => {
     <div style={containerStyle}>
       <h1 style={titleStyle}>카카오톡 채널 안내</h1>
       <div style={contentStyle}>
-        <p>과천시중소기업협의회 카카오톡 채널을 추가하고 새로운 소식을 받아보세요.</p>
-        <Link href="#" style={linkStyle}>
+        <p>과천시 중소기업협의회 카카오톡 실시간 소통 채널</p>
+        <Link href="https://open.kakao.com/o/ga3Ru5Ph" style={linkStyle}>
           카카오톡 채널 바로가기
         </Link>
-        <p style={{ marginTop: '1rem', color: '#777' }}>
-            (실제 링크로 교체될 예정입니다.)
-        </p>
       </div>
     </div>
   );

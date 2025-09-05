@@ -36,7 +36,7 @@ const GreetingPage = () => {
         </p>
         <br />
         <p>
-          <strong>과천시중소기업협의회 회장 OOO</strong>
+          <strong>과천시 중소기업협의회 회장 박정원</strong>
         </p>
       </div>
     </div>

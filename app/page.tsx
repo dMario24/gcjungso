@@ -8,20 +8,14 @@ import * as THREE from 'three';
 export default function Home() {
   const containerStyle: React.CSSProperties = {
     textAlign: 'center',
-    paddingTop: '50px',
-    paddingBottom: '50px',
-  };
-
-  const titleStyle: React.CSSProperties = {
-    fontSize: '2.5rem',
-    fontWeight: 'bold',
-    marginBottom: '1rem',
+    padding: '50px 20px',
   };
 
   const subtitleStyle: React.CSSProperties = {
     fontSize: '1.2rem',
     color: '#555',
     lineHeight: 1.6,
+    marginTop: '1rem',
     marginBottom: '2rem',
   };
 
@@ -47,9 +41,7 @@ export default function Home() {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            count={positions.length / 3}
-            array={positions}
-            itemSize={3}
+            args={[positions, 3]}
           />
         </bufferGeometry>
         <pointsMaterial
@@ -63,23 +55,27 @@ export default function Home() {
   }
 
   return (
-    <div style={containerStyle}>
-      <h1 style={titleStyle}>과천시중소기업협의회에 오신 것을 환영합니다.</h1>
-      <p style={subtitleStyle}>
-        우리는 과천시 중소기업의 성장을 넘어 지역 사회의 공동체, 시민, 청년, 
-        그리고 커뮤니티 발전을 함께 고민하며 실천합니다.
-        <br />
-        더불어 함께 성장하는 따뜻한 경제와 지속 가능한 미래를 만들어갑니다.
-      </p>
+    <div>
+      <main style={containerStyle}>
+        <h1 className="text-3xl md:text-6xl font-bold">
+            과천시 중소기업협의회에 오신 것을 환영합니다.
+        </h1>
+        <p style={subtitleStyle}>
+            우리는 과천시 중소기업의 성장을 넘어 지역 사회의 공동체, 시민, 청년, 
+            그리고 커뮤니티 발전을 함께 고민하며 실천합니다.
+            <br />
+            더불어 함께 성장하는 따뜻한 경제와 지속 가능한 미래를 만들어갑니다.
+        </p>
 
-      {/* 하단 인터랙티브 3D */}
-      <div style={canvasWrapperStyle}>
-        <Canvas camera={{ position: [0, 0, 5] }}>
-          <ambientLight intensity={0.5} />
-          <Particles />
-          <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
-        </Canvas>
-      </div>
+        {/* 하단 인터랙티브 3D */}
+        <div style={canvasWrapperStyle}>
+            <Canvas camera={{ position: [0, 0, 5] }}>
+            <ambientLight intensity={0.5} />
+            <Particles />
+            <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
+            </Canvas>
+        </div>
+      </main>
     </div>
   );
 }

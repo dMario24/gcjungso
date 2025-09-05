@@ -28,12 +28,12 @@ const MembersPage = () => {
   };
 
   const placeholderMembers = [
-    { id: 1, name: '회원사 A' },
-    { id: 2, name: '회원사 B' },
-    { id: 3, name: '회원사 C' },
-    { id: 4, name: '회원사 D' },
-    { id: 5, name: '회원사 E' },
-    { id: 6, name: '회원사 F' },
+    { id: 1, name: '(주)위드네트' },
+    { id: 2, name: '디지노리' },
+    // { id: 3, name: '회원사 C' },
+    // { id: 4, name: '회원사 D' },
+    // { id: 5, name: '회원사 E' },
+    // { id: 6, name: '회원사 F' },
   ];
 
   return (
