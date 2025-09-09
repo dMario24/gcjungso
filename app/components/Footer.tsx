@@ -5,8 +5,8 @@ const Footer = () => {
         <div className="md:flex md:justify-between md:items-center">
           <div className="mb-6 md:mb-0">
             <h2 className="text-lg font-semibold text-gray-800 mb-2">과천시중소기업협의회</h2>
-            <p className="text-sm">주소: 경기도 과천시 과천대로7길 65 과천상상자이타워 B동 126호</p>
-            <p className="text-sm">대표전화: 02-3418-3007</p>
+            <p className="text-sm">주소: 경기 과천시 과천대로7길 65, B1306</p>
+            <p className="text-sm">대표전화: 070-4820-1599</p>
           </div>
           <div className="text-sm">
             {/* 소셜 미디어 링크나 다른 내용을 추가할 수 있습니다. */}
