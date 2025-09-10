@@ -38,7 +38,7 @@ const MembersPage = () => {
       id: 1,
       name: '(주)위드네트',
       ceo: '홍길동',
-      website: 'https://withnet.co.kr',
+      website: 'https://wydnet.co.kr',
       product: '토탈 네트워크 & 인프라 솔루션',
     },
     {
