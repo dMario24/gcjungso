@@ -18,13 +18,13 @@ const OrgChart = () => {
       lineWidth={'2px'}
       lineColor={'#ddd'}
       lineBorderRadius={'10px'}
-      label={<Node text='회장(박정원)' />}
+      label={<Node text='준비위원장(박정원)' />}
     >
       <TreeNode label={<Node text='부회장' />}>
         <TreeNode label={<Node text='분과위원회' />} />
       </TreeNode>
       <TreeNode label={<Node text='감사' />} />
-      <TreeNode label={<Node text='사무총장(민경국)' />}>
+      <TreeNode label={<Node text='준비위원 사무국장(민경국)' />}>
         <TreeNode label={<Node text='총무위원회' />} />
         <TreeNode label={<Node text='기획위원회' />} />
         <TreeNode label={<Node text='홍보위원회' />} />

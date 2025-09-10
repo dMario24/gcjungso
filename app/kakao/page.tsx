@@ -36,10 +36,10 @@ const KakaoPage = () => {
 
   return (
     <div style={containerStyle}>
-      <h1 style={titleStyle}>카카오톡 채널 안내</h1>
+      <h1 style={titleStyle}>가입 및 문의</h1>
       <div style={contentStyle}>
-        <p>과천시 중소기업협의회 카카오톡 실시간 소통 채널</p>
-        <Link href="https://open.kakao.com/o/ga3Ru5Ph" style={linkStyle}>
+        <p>과천시 중소기업협의회(준) 카카오톡 실시간 소통 채널</p>
+        <Link href="https://open.kakao.com/o/gyfFspRh" style={linkStyle}>
           카카오톡 채널 바로가기
         </Link>
       </div>

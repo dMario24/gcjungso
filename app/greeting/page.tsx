@@ -23,7 +23,7 @@ const GreetingPage = () => {
       <h1 style={titleStyle}>회장 인사말</h1>
       <div style={contentStyle}>
         <p>
-          과천시중소기업협의회 홈페이지를 방문해주신 여러분을 진심으로 환영합니다.
+          과천시중소기업협의회(준) 방문해주신 여러분을 진심으로 환영합니다.
         </p>
         <p>
           우리 협의회는 과천시 중소기업의 권익을 보호하고 상호 간의 협력을 증진하여 지역 경제 발전에 기여하는 것을 목표로 하고 있습니다.
@@ -36,7 +36,7 @@ const GreetingPage = () => {
         </p>
         <br />
         <p>
-          <strong>과천시 중소기업협의회 회장 박정원</strong>
+          <strong>과천시 중소기업협의회 준비위원장 박정원</strong>
         </p>
       </div>
     </div>

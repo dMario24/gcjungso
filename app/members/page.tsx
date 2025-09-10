@@ -1,3 +1,7 @@
+'use client'; // Next.js App Router에서 이벤트/상호작용을 쓰려면 필요
+
+import React from 'react';
+
 const MembersPage = () => {
   const containerStyle: React.CSSProperties = {
     padding: '2rem',
@@ -25,28 +29,66 @@ const MembersPage = () => {
     padding: '1rem',
     textAlign: 'center',
     backgroundColor: '#fff',
+    cursor: 'pointer',
+    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
   };
 
   const placeholderMembers = [
-    { id: 1, name: '(주)위드네트' },
-    { id: 2, name: '디지노리' },
-    // { id: 3, name: '회원사 C' },
-    // { id: 4, name: '회원사 D' },
-    // { id: 5, name: '회원사 E' },
-    // { id: 6, name: '회원사 F' },
+    {
+      id: 1,
+      name: '(주)위드네트',
+      ceo: '홍길동',
+      website: 'https://withnet.co.kr',
+      product: '토탈 네트워크 & 인프라 솔루션',
+    },
+    {
+      id: 2,
+      name: '디지노리',
+      ceo: '민경국',
+      website: 'https://diginori.com',
+      product: 'AI & 데이터 솔루션',
+    },
   ];
 
   return (
-    <div style={containerStyle}>
-      <h1 style={titleStyle}>회원사 소개</h1>
-      <div style={memberListStyle}>
-        {placeholderMembers.map((member) => (
-          <div key={member.id} style={memberCardStyle}>
-            <p><strong>{member.name}</strong></p>
-          </div>
-        ))}
+    <>
+      <div style={containerStyle}>
+        <h1 style={titleStyle}>회원사 소개</h1>
+        <div style={memberListStyle}>
+          {placeholderMembers.map((member) => (
+            <a
+              key={member.id}
+              href={member.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <div className="member-card" style={memberCardStyle}>
+                <p><strong>{member.name}</strong></p>
+                {/* <p>대표: {member.ceo}</p> */}
+                <p>{member.product}</p>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
+
+      <div style={containerStyle}>
+        <h1 style={titleStyle}>상위기관</h1>
+        <div style={memberListStyle}>
+          <div style={memberCardStyle}>
+            <p><strong>과천시 기업협의회</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        .member-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+      `}</style>
+    </>
   );
 };
 
